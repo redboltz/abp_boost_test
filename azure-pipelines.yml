@@ -17,8 +17,8 @@ pool:
 
 steps:
 - powershell: |
-    git submodule update --init --recursive
-    mkdir build
+    git submodule update --init --recursive |
+    && mkdir build
     cd build
     $env:CL="/D_WIN32_WINNT#0x0601 /DBOOST_THREAD_VERSION#3"
     $env:BOOST_ROOT=$env:BOOST_ROOT_1_69_0
