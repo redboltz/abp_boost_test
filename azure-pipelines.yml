@@ -21,8 +21,8 @@ steps:
     mkdir build
     cd build
     set CL="/D_WIN32_WINNT#0x0601 /DBOOST_THREAD_VERSION#3"
-    set BOOST_ROOT=%BOOST_ROOT_1_69_0%
-    set PATH=%BOOST_ROOT%\lib;%PATH%
+    set BOOST_ROOT=$BOOST_ROOT_1_69_0
+    set PATH=$BOOST_ROOT/lib:$PATH
     cmake -A x64 ..
     echo $?
     cmake --build . --config Release -- -verbosity:minimal
