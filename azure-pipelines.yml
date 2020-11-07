@@ -15,8 +15,7 @@ pr:
 pool:
   vmImage: 'vs2017-win2016'
 
-task: PowerShell@2
-steps:
+steps: PowerShell@2
 - script: |
     git submodule update --init --recursive
     mkdir build
