@@ -11,4 +11,5 @@ FOREACH (source_file ${check_PROGRAMS})
     TARGET_LINK_LIBRARIES (
         ${source_file_we} Boost::unit_test_framework
     )
+    ADD_TEST (${source_file_we} ${source_file_we})
 ENDFOREACH ()
