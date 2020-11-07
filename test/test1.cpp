@@ -1,4 +1,4 @@
-#define BOOST_TEST_MODULE mqtt_client_cpp_test
+#define BOOST_TEST_MODULE abp_boost_test
 
 #include <boost/test/unit_test.hpp>
 
