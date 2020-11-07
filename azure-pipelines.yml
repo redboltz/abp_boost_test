@@ -26,6 +26,8 @@ steps:
     cmake -A x64 ..
     echo $?
     cmake --build . --config Release
+    echo $?
     cd test
     ctest -VV
+    echo $?
   displayName: 'cmake test'
