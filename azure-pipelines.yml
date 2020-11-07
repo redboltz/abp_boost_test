@@ -22,7 +22,7 @@ steps:
     cd build
     $env:CL="/D_WIN32_WINNT#0x0601 /DBOOST_THREAD_VERSION#3"
     $env:BOOST_ROOT=$BOOST_ROOT_1_69_0
-    $env:PATH=$env:BOOST_ROOT/lib;$env:PATH
+    $env:PATH=$env:BOOST_ROOT\lib;$env:PATH
     cmake -A x64 ..
     echo $?
     cmake --build . --config Release -- -verbosity:minimal
