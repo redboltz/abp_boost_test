@@ -25,7 +25,7 @@ steps:
     $env:PATH="$env:BOOST_ROOT\lib;"+$env:PATH
     cmake -A x64 ..
     echo $?
-    cmake --build . --config Release -- -verbosity:minimal
+    cmake --build . --config Release
     cd test
     ctest -VV
   displayName: 'cmake test'
