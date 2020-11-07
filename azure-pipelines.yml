@@ -19,33 +19,33 @@ steps:
 - powershell: |
     git submodule update --init --recursive
     if (!$?) {
-      return $?
+      return Write-Error "git submodule update --init --recursive failed"
     }
     mkdir build
     if (!$?) {
-      return $?
+      return Write-Error "mkdir build failed"
     }
     cd build
     if (!$?) {
-      return $?
+      return Write-Error "cd build failed"
     }
     $env:CL="/D_WIN32_WINNT#0x0601 /DBOOST_THREAD_VERSION#3"
     $env:BOOST_ROOT=$env:BOOST_ROOT_1_69_0
     $env:PATH="$env:BOOST_ROOT\lib;"+$env:PATH
     cmake -A x64 ..
     if (!$?) {
-      return $?
+      return Write-Error "cmake -A x64 .. failed"
     }
     cmake --build . --config Release
     if (!$?) {
-      return $?
+      return Write-Error "cmake --build . --config Release failed"
     }
     cd test
     if (!$?) {
-      return $?
+      return Write-Error "cd test failed"
     }
     ctest -VV
     if (!$?) {
-      return $?
+      return Write-Error "ctest -VV failed"
     }
   displayName: 'cmake test'
