@@ -18,20 +18,34 @@ pool:
 steps:
 - powershell: |
     git submodule update --init --recursive
-    if (!$?) return $?
+    if (!$?) {
+      return $?
+    }
     mkdir build
-    if (!$?) return $?
+    if (!$?) {
+      return $?
+    }
     cd build
-    if (!$?) return $?
+    if (!$?) {
+      return $?
+    }
     $env:CL="/D_WIN32_WINNT#0x0601 /DBOOST_THREAD_VERSION#3"
     $env:BOOST_ROOT=$env:BOOST_ROOT_1_69_0
     $env:PATH="$env:BOOST_ROOT\lib;"+$env:PATH
     cmake -A x64 ..
-    if (!$?) return $?
+    if (!$?) {
+      return $?
+    }
     cmake --build . --config Release
-    if (!$?) return $?
+    if (!$?) {
+      return $?
+    }
     cd test
-    if (!$?) return $?
+    if (!$?) {
+      return $?
+    }
     ctest -VV
-    if (!$?) return $?
+    if (!$?) {
+      return $?
+    }
   displayName: 'cmake test'
