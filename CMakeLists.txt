@@ -1,0 +1,9 @@
+CMAKE_MINIMUM_REQUIRED (VERSION 3.13.0)
+PROJECT (abp_boost_test)
+
+FIND_PACKAGE (Threads REQUIRED)
+
+FIND_PACKAGE (Boost 1.67.0 REQUIRED COMPONENTS system date_time log filesystem thread)
+
+ENABLE_TESTING ()
+ADD_SUBDIRECTORY (test)
