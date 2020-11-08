@@ -23,6 +23,7 @@ strategy:
       VAL1: OFF
 steps:
 - bash: |
+    echo "which el.exe"
     which cl.exe
     git submodule update --init --recursive
     mkdir build
