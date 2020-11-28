@@ -49,6 +49,7 @@ steps:
     }
     pwd
 - bash: |
+    ls -l test
     cd build
     cd test
     pwd
