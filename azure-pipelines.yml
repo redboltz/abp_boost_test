@@ -46,6 +46,7 @@ steps:
     if (!$?) {
       return Write-Error "cmake --build . --config Release failed"
     }
+- bash: |
     cd test
     if (!$?) {
       return Write-Error "cd test failed"
