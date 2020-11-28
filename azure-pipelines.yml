@@ -23,6 +23,7 @@ strategy:
       VAL1: OFF
 steps:
 - powershell: |
+    ls -l test
     git submodule update --init --recursive
     if (!$?) {
       return Write-Error "git submodule update --init --recursive failed"
