@@ -46,7 +46,10 @@ steps:
     if (!$?) {
       return Write-Error "cmake --build . --config Release failed"
     }
+    pwd
 - bash: |
+    cd build
     cd test
+    pwd
     ctest -VV
   displayName: 'cmake test'
