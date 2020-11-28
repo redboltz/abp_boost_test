@@ -48,11 +48,5 @@ steps:
     }
 - bash: |
     cd test
-    if (!$?) {
-      return Write-Error "cd test failed"
-    }
     ctest -VV
-    if (!$?) {
-      return Write-Error "ctest -VV failed"
-    }
   displayName: 'cmake test'
