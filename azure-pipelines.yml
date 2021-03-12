@@ -55,3 +55,4 @@ steps:
     pwd
     CTEST_ARGS="--log_level=all" ctest -VV -C Release
   displayName: 'cmake test'
+
