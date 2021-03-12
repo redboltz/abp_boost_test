@@ -11,5 +11,5 @@ FOREACH (source_file ${check_PROGRAMS})
     TARGET_LINK_LIBRARIES (
         ${source_file_we} Boost::unit_test_framework
     )
-    ADD_TEST (NAME ${source_file_we} COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/args_provider.sh ${CMAKE_CURRENT_BINARY_DIR}/${source_file_we})
+    ADD_TEST (NAME ${source_file_we} COMMAND ${CMAKE_CURRENT_BINARY_DIR}/${source_file_we})
 ENDFOREACH ()
