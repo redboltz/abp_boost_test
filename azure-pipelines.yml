@@ -53,6 +53,6 @@ steps:
     cd build
     cd test
     pwd
-    CTEST_ARGS="--log_level=all" ctest -VV -C Release
+    ctest -VV -C Release
   displayName: 'cmake test'
 
