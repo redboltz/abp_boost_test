@@ -24,7 +24,7 @@ strategy:
 steps:
 - powershell: |
     dir "C:\Program Files"
-    dir "C:\Program Files\OpenSSL-Win64"
+    dir "C:\Program Files\OpenSSL"
   displayName: 'install openssl'
 
 - powershell: |
