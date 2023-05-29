@@ -15,4 +15,5 @@ BOOST_AUTO_TEST_CASE( case1 ) {
     BOOST_TEST(s1 == s2);
 }
 
+
 BOOST_AUTO_TEST_SUITE_END()
